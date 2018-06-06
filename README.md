@@ -1,2 +1,4 @@
-component base
+component base,
+
+Hello.
 
