@@ -12,7 +12,7 @@ node {
     	        sh 'mkdir ${WORKSPACE}'
                 sh 'mkdir build'
                 sh 'cd build'
-                sh 'cmake -DCMAKE_INSTALL_PREFIX=$PWD .. 
+                sh 'cmake -DCMAKE_INSTALL_PREFIX=$PWD ..
                 sh 'make -j16'
                 sh 'make install'
 
