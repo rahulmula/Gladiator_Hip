@@ -14,7 +14,7 @@ node {
     	        sh 'mkdir ${WORKSPACE}'
                 sh 'mkdir build'
                 sh 'cd build'
-                sh 'cmake -DCMAKE_INSTALL_PREFIX=${rootDir} ..
+                sh 'cmake -DCMAKE_INSTALL_PREFIX=${rootDir} ..'
                 sh 'make -j16'
                 sh 'make install'
 
