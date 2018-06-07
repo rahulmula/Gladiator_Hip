@@ -10,8 +10,9 @@ node {
       }
 
     stage('Build') {
+    	        deleteDir()
     	        sh 'cd ${WORKSPACE}'
-                //sh 'mkdir build'
+                sh 'mkdir build'
                 sh 'cd build'
                 sh 'cmake -DCMAKE_INSTALL_PREFIX=$PWD/ ..'
                 sh 'make -j16'
