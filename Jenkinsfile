@@ -1,4 +1,4 @@
-node {
+node ('rocm_sshaik1') {
   
     stage('checkouts') {
 
@@ -10,7 +10,7 @@ node {
       }
 
     stage('Build') {
-    	        deleteDir()
+
     	        sh 'cd ${WORKSPACE}'
                 sh 'mkdir build'
                 sh 'cd build'
