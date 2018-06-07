@@ -2,7 +2,6 @@ node {
   
     stage('checkouts') {
 
-    	def rootDir = pwd()
        
         sh 'id'
         stage('Jenkinsfile utility')
@@ -14,7 +13,7 @@ node {
     	        sh 'cd ${WORKSPACE}'
                 sh 'mkdir build'
                 sh 'cd build'
-                sh 'cmake -DCMAKE_INSTALL_PREFIX=${rootDir} ..'
+                sh 'cmake -DCMAKE_INSTALL_PREFIX=$PWD ..'
                 sh 'make -j16'
                 sh 'make install'
 
