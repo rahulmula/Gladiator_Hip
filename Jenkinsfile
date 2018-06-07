@@ -11,7 +11,7 @@ node {
       }
 
     stage('Build') {
-    	        sh 'mkdir ${WORKSPACE}'
+    	        sh 'cd ${WORKSPACE}'
                 sh 'mkdir build'
                 sh 'cd build'
                 sh 'cmake -DCMAKE_INSTALL_PREFIX=${rootDir} ..'
